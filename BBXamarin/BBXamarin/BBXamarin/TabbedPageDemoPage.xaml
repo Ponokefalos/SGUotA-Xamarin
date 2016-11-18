@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:local="clr-namespace:BBXamarin;assembly=BBXamarin"
+            x:Class="BBXamarin.TabbedPageDemoPage"> 
+  <TabbedPage.ItemTemplate>
+    <DataTemplate>
+      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
+        <StackLayout Padding="5, 25">
+          <Label Text="{Binding Name}"
+                 Font="Bold,Large"
+                 HorizontalOptions="Center" />
+          <Image Source="{Binding PhotoUrl}"
+                 WidthRequest="200" 
+                 HeightRequest="200" />
+          <StackLayout Padding="50, 10">
+            <StackLayout Orientation="Horizontal">
+              <Label Text="Family:"
+                     HorizontalOptions="FillAndExpand" />
+              <Label Text="{Binding Family}"
+                     Font="Bold,Medium" />
+            </StackLayout>  
+          </StackLayout>
+        </StackLayout>
+      </ContentPage>
+    </DataTemplate>
+  </TabbedPage.ItemTemplate>
+</TabbedPage>
