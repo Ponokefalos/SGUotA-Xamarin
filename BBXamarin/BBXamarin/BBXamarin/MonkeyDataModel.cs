@@ -18,7 +18,7 @@ namespace BBXamarin
 
         public static IList<MonkeyDataModel> All { set; get; }
 
-        static MonkeyDataModel()
+        public  MonkeyDataModel()
         {
             All = new ObservableCollection<MonkeyDataModel> {
                 new MonkeyDataModel {

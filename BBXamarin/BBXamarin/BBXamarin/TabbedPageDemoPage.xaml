@@ -3,7 +3,10 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
             xmlns:local="clr-namespace:BBXamarin;assembly=BBXamarin"
-            x:Class="BBXamarin.TabbedPageDemoPage"> 
+            x:Class="BBXamarin.TabbedPageDemoPage">
+  <TabbedPage.ItemsSource>
+    <local:MonkeyDataModel.All/>
+  </TabbedPage.ItemsSource>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
       <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
